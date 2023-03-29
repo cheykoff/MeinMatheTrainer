@@ -6,7 +6,7 @@
     <mat-label>Bundesland</mat-label>
     <mat-select [(ngModel)]="selectedFederalState" name="bundesland">
       <mat-option *ngFor="let option of federalStates" [value]="option">
-        {{ option }}
+        {{ option.state }}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -16,7 +16,7 @@
     <mat-label>Schulart</mat-label>
     <mat-select [(ngModel)]="selectedSchoolType" name="schulart">
       <mat-option *ngFor="let option of schoolTypes" [value]="option">
-        {{ option }}
+        {{ option.schoolType }}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -26,7 +26,7 @@
     <mat-label>Klasse</mat-label>
     <mat-select [(ngModel)]="selectedClassLevel" name="klasse">
       <mat-option *ngFor="let option of classLevels" [value]="option">
-        {{ option }}
+        {{ option.classLevel }}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -36,7 +36,7 @@
     <mat-label>Thema</mat-label>
     <mat-select [(ngModel)]="selectedTopic" name="thema">
       <mat-option *ngFor="let option of topics" [value]="option">
-        {{ option }}
+        {{ option.topic }}
       </mat-option>
     </mat-select>
   </mat-form-field>
