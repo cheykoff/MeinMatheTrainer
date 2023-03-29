@@ -1,7 +1,6 @@
 <!-- select-topic.component.html -->
 <h1>Thema auswählen</h1>
 <form (submit)="createExercise()">
-  <h4>Bundesland</h4>
   <mat-form-field floatLabel="always">
     <mat-label>Bundesland</mat-label>
     <mat-select [(ngModel)]="selectedFederalState" name="bundesland">
@@ -11,7 +10,6 @@
     </mat-select>
   </mat-form-field>
 
-  <h4>Schulart</h4>
   <mat-form-field floatLabel="always">
     <mat-label>Schulart</mat-label>
     <mat-select [(ngModel)]="selectedSchoolType" name="schulart">
@@ -21,7 +19,6 @@
     </mat-select>
   </mat-form-field>
 
-  <h4>Klasse</h4>
   <mat-form-field floatLabel="always">
     <mat-label>Klasse</mat-label>
     <mat-select [(ngModel)]="selectedClassLevel" name="klasse">
@@ -31,7 +28,6 @@
     </mat-select>
   </mat-form-field>
 
-  <h4>Thema</h4>
   <mat-form-field floatLabel="always">
     <mat-label>Thema</mat-label>
     <mat-select [(ngModel)]="selectedTopic" name="thema">

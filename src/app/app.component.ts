@@ -17,7 +17,7 @@ export class AppComponent {
   myForm: FormGroup;
   exercise: FormGroup;
 
-  title = 'dynamic-question-demo';
+  title = 'MeinMatheTrainer';
 
   question = '';
   onQuestionCreated(event) {
