@@ -12,7 +12,7 @@
   </mat-form-field>
 
   <h4>Schulart</h4>
-  <mat-form-field>
+  <mat-form-field floatLabel="always">
     <mat-label>Schulart</mat-label>
     <mat-select [(ngModel)]="selectedSchoolType" name="schulart">
       <mat-option *ngFor="let option of schoolTypes" [value]="option">
@@ -22,7 +22,7 @@
   </mat-form-field>
 
   <h4>Klasse</h4>
-  <mat-form-field>
+  <mat-form-field floatLabel="always">
     <mat-label>Klasse</mat-label>
     <mat-select [(ngModel)]="selectedClassLevel" name="klasse">
       <mat-option *ngFor="let option of classLevels" [value]="option">
@@ -32,7 +32,7 @@
   </mat-form-field>
 
   <h4>Thema</h4>
-  <mat-form-field>
+  <mat-form-field floatLabel="always">
     <mat-label>Thema</mat-label>
     <mat-select [(ngModel)]="selectedTopic" name="thema">
       <mat-option *ngFor="let option of topics" [value]="option">
@@ -41,7 +41,5 @@
     </mat-select>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" [disabled]="">
-    Aufgabe erstellen
-  </button>
+  <button mat-raised-button color="primary">Aufgabe erstellen</button>
 </form>

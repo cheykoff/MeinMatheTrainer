@@ -3,7 +3,13 @@
   <form>
     <mat-form-field>
       <mat-label for="answer-input">Antwort</mat-label>
-      <input matInput type="text" id="answer-input" [(ngModel)]="givenAnswer" />
+      <input
+        matInput
+        type="text"
+        id="answer-input"
+        name="answer"
+        [(ngModel)]="givenAnswer"
+      />
     </mat-form-field>
     <button mat-raised-button color="primary" (click)="checkAnswer()">
       Antwort überprüfen
