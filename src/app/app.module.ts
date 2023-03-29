@@ -13,9 +13,10 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { QuestionCardComponent } from './components/question-card/question-card.component';
 import { SelectTopicComponent } from './components/select-topic/select-topic.component';
+import { AnswerComponent } from './components/answer/answer.component';
 
 @NgModule({
-  declarations: [AppComponent, QuestionCardComponent, SelectTopicComponent],
+  declarations: [AppComponent, QuestionCardComponent, SelectTopicComponent, AnswerComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

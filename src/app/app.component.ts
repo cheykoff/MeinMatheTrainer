@@ -73,6 +73,11 @@ export class AppComponent {
 
   title = 'dynamic-question-demo';
 
+  question = '';
+  onQuestionCreated(event) {
+    this.question = 'Bestimme die Lösung der Gleichung ? : 2 = 78.';
+  }
+
   constructor() {
     this.myForm = new FormGroup({
       federalStates: new FormControl('', [Validators.required]),
@@ -91,7 +96,7 @@ export class AppComponent {
     this.createExercise();
   }
 
-  question = '';
+  // question = '';
   correctAnswer = '';
 
   createExercise() {
@@ -107,5 +112,9 @@ export class AppComponent {
     } else {
       this.feedback = 'Falsch!';
     }
+  }
+
+  onAnswerChecked(result: boolean) {
+    this.feedback = result ? 'Correct' : 'Incorrect';
   }
 }

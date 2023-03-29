@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 import { FederalState, federalStates } from './federal-states';
@@ -17,6 +17,8 @@ export class SelectTopicComponent {
   selectedClassLevel: string;
   selectedTopic: string;
 
+  @Output() questionCreated = new EventEmitter();
+
   disableSelect = new FormControl(false);
 
   federalStates: FederalState[] = federalStates;
@@ -27,6 +29,7 @@ export class SelectTopicComponent {
   topics: Topic[] = topics;
 
   createExercise() {
+    this.questionCreated.emit();
     // Handle form submission here
   }
 }

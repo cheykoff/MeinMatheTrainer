@@ -70,14 +70,20 @@
     <button type="submit" [disabled]="exercise.invalid">Antwort prüfen</button>
   </form>
 </div>
-<div class="feedback">
-  <p>{{ feedback }}</p>
-</div>
+
 <hr />
 <div>
-  <app-select-topic></app-select-topic>
+  <app-select-topic
+    (questionCreated)="onQuestionCreated($event)"
+  ></app-select-topic>
 </div>
 
 <div>
-  <app-question-card></app-question-card>
+  <app-question-card [question]="question"></app-question-card>
+</div>
+
+<app-answer (answerChecked)="onAnswerChecked($event)"></app-answer>
+
+<div class="feedback">
+  <p>{{ feedback }}</p>
 </div>
