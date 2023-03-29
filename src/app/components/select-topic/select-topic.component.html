@@ -1,0 +1,47 @@
+<!-- select-topic.component.html -->
+<h1>Thema auswählen</h1>
+<form (submit)="createExercise()">
+  <h4>Bundesland</h4>
+  <mat-form-field floatLabel="always">
+    <mat-label>Bundesland</mat-label>
+    <mat-select [(ngModel)]="selectedFederalState" name="bundesland">
+      <mat-option *ngFor="let option of federalStates" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Schulart</h4>
+  <mat-form-field>
+    <mat-label>Schulart</mat-label>
+    <mat-select [(ngModel)]="selectedSchoolType" name="schulart">
+      <mat-option *ngFor="let option of schoolTypes" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Klasse</h4>
+  <mat-form-field>
+    <mat-label>Klasse</mat-label>
+    <mat-select [(ngModel)]="selectedClassLevel" name="klasse">
+      <mat-option *ngFor="let option of classLevels" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Thema</h4>
+  <mat-form-field>
+    <mat-label>Thema</mat-label>
+    <mat-select [(ngModel)]="selectedTopic" name="thema">
+      <mat-option *ngFor="let option of topics" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="">
+    Aufgabe erstellen
+  </button>
+</form>
