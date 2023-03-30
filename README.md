@@ -1,4 +1,4 @@
-# MeinMatheTrainer
+# MeineMatheTrainerin
 
 ## Purpose
 
